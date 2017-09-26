@@ -17,7 +17,8 @@ AllowRoot=1
 Include=/etc/zabbix/zabbix_agentd.d/*.conf
 
 -------------------------------------------
-3. add the xml template to Configuration -> Templates.
+3. add the xml template to Configuration -> Templates
+
 4 adding scripts /etc/zabbix/externalscripts/ or your own path of zabbix scripts.
 5. add permission for scripts:
 
@@ -28,6 +29,8 @@ Restart zabbix agent on client side.
  
  service zabbix-agent restart or systemctl restart zabbix-agent
 --------------------------------------------------------------------
+For Info:
+
 On script ans_call,drop_call,sla,waiting_call change queue number "queue show 1000" which you use.
 On script sip_usage "Peer Ip address" add your SIP peer address. For example: "172.16.16.1"
 On script trunk_down "SIP PEER NAME" add your SIP peer Name. For example: "ISPSIP1"
